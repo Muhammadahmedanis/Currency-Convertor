@@ -18,7 +18,7 @@
         </div>
         <div class="input-field">
             <p>Enter Amount</p>
-            <input type="text" placeholder="Enter value">
+            <input id="inp" type="text" placeholder="Enter value">
         </div>
         <div class="selection-box">
             <div>
@@ -27,9 +27,9 @@
                     <img src="https://flagsapi.com/US/flat/64.png">
                     <select>
                         <option value="USD">USD</option>
-                        <option value="NPR">NPR</option>
+                        <!-- <option value="NPR">NPR</option>
                         <option value="INT">INT</option>
-                        <option value="PKR">PKR</option>
+                        <option value="PKR">PKR</option> -->
                     </select>
                 </div>
             </div>
@@ -37,21 +37,63 @@
             <div>
                 <p>To</p>
                 <div class="select-box">
-                    <img src="https://flagsapi.com/PK/flat/64.png">
-                    <select>
-                        <option value="PKR">PKR</option>
-                        <option value="USD">USD</option>
-                        <option value="NPR">NPR</option>
-                        <option value="INT">INT</option>
+                    <img id="img"src="https://flagsapi.com//flat/64.png">
+                    <select onchange="clk()" class="selectTo">
+                        <option value="null">select</option>
+                        <option value="PK" id="rs">PKR</option>
+                        <option value="US" id="rs">USD</option>
+                        <option value="NP" id="rs">NPR</option>
+                        <option value="IN" id="rs">INR</option>
+                        <option value="AR" id="rs">ARS</option>
+                        <option value="AU" id="rs">AUD</option>
+                        <option value="BM" id="rs">BMD</option>
+                        <option value="BI" id="rs">BIF</option>
+                        <option value="BD" id="rs">BDT</option>
+                        <option value="BR" id="rs">BRL</option>
+                        <option value="CA" id="rs">CAD</option>
+                        <option value="CH" id="rs">CHF</option>
+                        <option value="CN" id="rs">CNY</option>
+                        <option value="DZ" id="rs">DZD</option>
+                        <option value="DK" id="rs">DKK</option>
+                        <option value="EG" id="rs">EGP</option>
+                        <option value="FJ" id="rs">FJD</option>
+                        <option value="HK" id="rs">HKD</option>
+                        <option value="HR" id="rs">HR</option>
+                        <option value="HU" id="rs">HUF</option>
+                        <option value="ID" id="rs">IDR</option>
+                        <option value="IS" id="rs">ISK</option>
+                        <option value="IL" id="rs">ILS</option>
+                        <option value="IQ" id="rs">IQD</option>
+                        <option value="IR" id="rs">IRR</option>
+                        <option value="JP" id="rs">JPY</option>
+                        <option value="JO" id="rs">JOD</option>
+                        <option value="KE" id="rs">KES</option>
+                        <option value="KH" id="rs">KHR</option>
+                        <option value="KW" id="rs">KWD</option>
+                        <option value="LB" id="rs">LBP</option>
+                        <option value="LK" id="rs">LKR</option>
+                        <option value="MA" id="rs">MAD</option>
+                        <option value="MV" id="rs">MVR</option>
+                        <option value="MX" id="rs">MXN</option>
+                        <option value="MY" id="rs">MYR</option>
+                        <option value="NO" id="rs">NOK</option>
+                        <option value="NZ" id="rs">NZD</option>
+                        <option value="OM" id="rs">OMR</option>
+                        <option value="SA" id="rs">SAR</option>
+                        <option value="SE" id="rs">SEK</option>
+                        <option value="SZ" id="rs">SZL</option>
+                        <option value="TR" id="rs">TRY</option>
+                        <option value="ZA" id="rs">ZAR</option>
+                        <option value="ZW" id="rs">ZWL</option>
                     </select>
                 </div>
             </div>
         </div>
         <div>
-            <p class="currency-value">1 USD = 279.23PKR </p>
+            <p class="currency-value"><span id="one">1</span> USD = <span id="two">279.23PKR</span></p>
         </div>
         <div class="btn">
-            <button>Get Exchange Rate</button>
+            <button onclick="generate()">Get Exchange Rate</button>
         </div>
 
 
